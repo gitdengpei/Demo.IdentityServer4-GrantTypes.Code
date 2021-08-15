@@ -1,20 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Text.Encodings.Web;
-using System.Text.Unicode;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
 namespace Demo.Mvc
 {
-    public class Startup
+	public class Startup
     {
         public Startup(IConfiguration configuration)
         {
