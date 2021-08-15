@@ -1,0 +1,28 @@
+﻿@{
+	ViewData["Title"] = "CallApi";
+}
+
+<h1>CallApi</h1>
+<div id="app">
+ <ul style="list-style-type:none"  v-show='isBool === "True"'>
+  <li v-for="site in sites">
+   {{ site.type }}:{{site.value}}
+  </li>
+ </ul>
+</div>
+@section Scripts{
+<script src="https://unpkg.com/vue@next"></script>
+<script type="text/javascript">	
+	const app = {
+	  data() {
+		return {
+		  sites: @Html.Raw(@ViewBag.Json),
+		  isBool:"@Html.Raw(@ViewBag.IsBool)"
+		}
+	  },
+	}
+
+	Vue.createApp(app).mount('#app')
+</script>
+}
+
